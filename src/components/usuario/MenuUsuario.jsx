@@ -49,7 +49,7 @@ const MenuUsuario = () => {
           window.location.reload();
         }
         else {
-          alert('No puedes borrar mas platos el minimo es  ' + cond);
+          alert('No puedes borrar mas platos.');
         }
       }
       i++;

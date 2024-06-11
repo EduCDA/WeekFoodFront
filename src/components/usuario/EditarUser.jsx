@@ -5,7 +5,8 @@ import Footer from '../componetsComplement/Footer';
 import axios from 'axios';
 import md5 from 'md5';
 const EditarUser = () => {
-
+    var newPassword;
+    var passwordForm
     const URI = "http://localhost:8000/users/";
     var { user } = useContext(UserContext);
     const id = user.id;
@@ -13,8 +14,8 @@ const EditarUser = () => {
         firstName: user.nombre,
         lastName: user.apellidos,
         email: user.correo,
-        password: user.password,
-        passVal: user.password
+        password: '',
+        passVal: ''
     });
     const [errors, setErrors] = useState({});
     const validateTextName = (textName) => {
@@ -42,8 +43,20 @@ const EditarUser = () => {
         }
         return errors;
     };
+    const sendData = async (passwordForm) => {
+       
+        //Enviamos los datos a la base de datos.
 
-    console.log(form)
+        if (user.contraseña !== passwordForm) {
+            newPassword = md5(form.password);
+
+        } else {
+            newPassword = user.contraseña;
+        }
+        await axios.put(URI + id, { nombre: form.firstName, apellidos: form.lastName, correo: form.email, contraseña: newPassword })
+        alert('Se han modificado correctamente los datos');
+        window.location.reload();
+    }
     //Función que envia los datos a la base de datos. 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -65,34 +78,40 @@ const EditarUser = () => {
         else if (!validateEmail(form.email)) {
             validationErrors.email = 'El correo electrónico no es válido.';
         }
-        const passwordErrors = validatePassword(form.password);//MIRAR
-        if (passwordErrors.length > 0) {
-            validationErrors.password = passwordErrors.join(' ');
-        }
-        if (form.passVal !== form.password) {
-            validationErrors.passVal = 'Las contraseñas no coinciden';
-        }
+        if (form.password !== '') {
+            if (user.contraseña !== form.password) {
+                const passwordErrors = validatePassword(form.password);//MIRAR
+                if (passwordErrors.length > 0) {
+                    validationErrors.password = passwordErrors.join(' ');
+                }
+                if (form.passVal !== form.password) {
+                    validationErrors.passVal = 'Las contraseñas no coinciden';
+                }
 
-        if (Object.keys(validationErrors).length > 0) {
-            setErrors(validationErrors);
+                if (Object.keys(validationErrors).length > 0) {
+                    setErrors(validationErrors);
+                }
+                else {
+                    setErrors({});
+                    passwordForm =  form.password;
+                    sendData(passwordForm);
+                }
+            }
+            else {
+                setErrors({});
+                passwordForm =  form.password;
+                sendData(passwordForm);
+
+            }
         }
         else {
             setErrors({});
-            //Enviamos los datos a la base de datos.
-            var newPassword;
-            if (user.password !== form.password) {
-                newPassword = md5(form.password);
-
-            } else {
-                newPassword = user.password;
-            }
-            await axios.put(URI + id, { nombre: form.firstName, apellidos: form.lastName, correo: form.email, contraseña: newPassword })
-            alert('Se han modificado correctamente los datos');
-            window.location.reload();
+            passwordForm =  user.contraseña;
+            sendData(passwordForm);
 
         }
-    };
 
+    };
     const handleChange = (e) => {
         setForm({
             ...form,
@@ -150,6 +169,7 @@ const EditarUser = () => {
                             name="password"
                             value={form.password}
                             onChange={handleChange}
+
                         />
                         {errors.password && <p className='errors'>{errors.password}</p>}
                     </div>
