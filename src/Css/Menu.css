@@ -1,0 +1,155 @@
+.cardMenu {
+    margin: 2%;
+}
+
+#menuContainer {
+    padding-left: 5%;
+}
+
+.bodyMenu {
+    display: flex;
+    flex-flow: column;
+}
+
+.buttonMenu {
+    margin-top: auto;
+    text-decoration: none;
+    color: rgb(254, 201, 41);
+    text-align: center;
+    background-color: rgb(31, 62, 0);
+    border: none;
+    height: 2rem;
+    border-radius: 2rem;
+    padding-top: 3px;
+}
+
+.buttonMenu:hover {
+    color: rgb(255, 255, 255);
+}
+
+.titleConMenu {
+    text-align: center;
+    margin-top: 3%;
+    font-family: EBGaramondVariable;
+    font-weight: 800;
+    color: rgb(31, 62, 0);
+    padding-bottom: 1cqmax;
+}
+
+@media (max-width: 1300px) {
+    #menuContainer {
+        padding-left: 10%;
+    }
+}
+
+@media (max-width: 1093px) {
+    #menuContainer {
+        padding-left: 21%;
+    }
+
+    #contanerImg {
+        display: none;
+    }
+}
+
+@media (max-width: 850px) {
+    #menuContainer {
+        padding-left: 10%;
+    }
+
+}
+
+@media (max-width: 730px) {
+    #menuContainer {
+        margin-left: 5%;
+    }
+    .videoPl {
+        display: none;
+    }
+
+    #contanerImg {
+        display: unset;
+    }
+
+    #contentIngredient {
+        min-width: 300px;
+    }
+
+    .imgDish {
+        justify-content: center;
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .ingDish {
+        text-align: none;
+    }
+
+    #midDish {
+        min-width: 300px;
+    }
+    
+
+}
+@media (max-width: 560px) {
+    #lMidDish {
+        display: none;
+    }
+
+    #rMidDish {
+        display: none;
+    }
+    #midDish{
+        margin-left: 20%;
+    }
+}
+
+@media (max-width: 330px) {
+
+    
+    #contentIngredient {
+        min-width: 200px;
+    }
+
+    #midDish {
+        min-width: 200px;
+    }
+
+    .imgDish {
+        justify-content: center;
+        min-width: 150px;
+    }
+}
+
+/* Es el diseño de Plato */
+.videoPl {
+    text-align: center;
+}
+
+#contentMidDish {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.ingDish {
+    text-align: center;
+}
+
+#contentIngredient {
+    background-color: rgb(31, 62, 0);
+    border-radius: 2cqmax;
+    padding: 2%;
+    size-adjust: 100%;
+}
+
+#contentDish {
+
+    color: rgb(255, 255, 255);
+    margin: 4%;
+}
+
+.imgDish {
+    margin: 4%;
+    width: 30cqmax;
+}

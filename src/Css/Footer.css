@@ -1,0 +1,48 @@
+@font-face {
+    font-family:Freeman ;
+    src: url(../sources/Freeman-Regular.ttf);
+}
+@font-face {
+    font-family: EBGaramondItalic ;
+    src: url(../sources/EBGaramond-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family:EBGaramondVariable ;
+    src: url(../sources/EBGaramond-VariableFont_wght.ttf);
+}
+.footerR{
+    justify-content: flex-end;
+}
+.imgFooter
+{
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 50px;
+}
+.imgInstFooter
+{
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 40px;
+}
+#footer
+{
+    background-color: rgb(31, 62, 0); 
+}
+.titleFooter
+{
+    font-family: "EBGaramondVariable";
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 3cqmax;
+    font-weight: 900;
+    color: rgb(254, 201, 41);
+}
+.footerPosition{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+}

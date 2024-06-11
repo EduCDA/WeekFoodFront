@@ -1,0 +1,117 @@
+@font-face {
+    font-family: Freeman;
+    src: url(../sources/Freeman-Regular.ttf);
+}
+
+@font-face {
+    font-family: EBGaramondItalic;
+    src: url(../sources/EBGaramond-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: EBGaramondVariable;
+    src: url(../sources/EBGaramond-VariableFont_wght.ttf);
+}
+
+#caseTop {
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+#caseBoot {
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+#secondImg {
+    max-width: 30cqmax;
+    border-radius: 5cqmax;
+    margin-top: 3%;
+}
+
+#imgArboleda {
+    max-width: 30cqmax;
+    margin-left: 15%;
+    border-radius: 5cqmax;
+    margin-top: 3%;
+}
+
+.titleCon {
+    margin-top: 3%;
+    font-family: EBGaramondVariable;
+    font-weight: 800;
+    color: rgb(31, 62, 0);
+    padding-bottom: 1cqmax;
+}
+
+/* Contact */
+#parrafTop {
+    margin-top: 5%;
+}
+
+#parrafBoot {
+    margin-top: 5%;
+}
+
+#imgContactTop {
+    width: 30cqmax;
+    border-radius: 5cqmax;
+    margin-top: 1%;
+}
+
+#imgContactBoot {
+    height: 18cqmax;
+    width: 30cqmax;
+    margin-left: 15%;
+    border-radius: 5cqmax;
+    margin-top: 3%;
+}
+
+#caseContact {
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.title {
+    margin-top: 3%;
+    text-align: center;
+    font-family: EBGaramondVariable;
+    font-weight: 800;
+    color: rgb(31, 62, 0);
+    padding-bottom: 1cqmax;
+}
+
+@media (max-width: 850px) {
+    #imgInstragram
+    {
+        display: none;
+    }
+    #imgCorreo
+    {
+        display: none;
+    }
+    #imgContactTop {
+        display: none;
+    }
+
+    #imgContactBoot {
+        display: none;
+    }
+
+    /* Conocenos */
+    #caseImgArboleda{
+        display: none;
+    }
+    #caseImgComida
+    {
+        display: none;
+    }
+
+    #secondImg {
+        display: none;
+    }
+
+    #imgArboleda {
+        display: none;
+    }
+}

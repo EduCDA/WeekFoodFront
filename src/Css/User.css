@@ -1,0 +1,105 @@
+#rowTable{
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+#caseTable{
+    border: solid;
+    border-collapse: collapse;
+    background-color: rgb(254, 201, 41);
+    
+}
+.buttonTable{
+    max-height: 7rem;
+    width: 100%;
+    min-width: 10rem;
+    min-height: 7rem;
+    border: none;
+    text-align: left;
+    background-color: rgb(254, 201, 41);
+}
+.titleUser {
+    text-align: center;
+    margin-top: 4%;
+    font-family: EBGaramondVariable;
+    font-weight: 800;
+    color: rgb(31, 62, 0);
+}
+.titleConLit{
+    margin-top: 1%;
+    font-family: EBGaramondVariable;
+    font-weight: 800;
+    color: rgb(96, 63, 0);
+}
+.titleUserMain {
+    text-align: center;
+    margin-top: 1%;
+    font-family: EBGaramondVariable;
+    font-weight: 800;
+    color: rgb(31, 62, 0);
+}
+.buttonTable:hover{
+    color: white;
+    background-color: rgb(31, 62, 0); 
+}
+@media (max-width: 1320px) {
+    #caseL{
+        display: none;
+    }
+}
+
+/* Diseño del Menu del usuario */
+.buttonMenuUser {
+    margin-top: auto;
+    text-decoration: none;
+    color: rgb(254, 201, 41);
+    text-align: center;
+    background-color: rgb(31, 62, 0);
+    border: none;
+    height: 2rem;
+    border-radius: 2rem;
+    padding-top: 3px;
+}
+.buttonMenuUser:hover {
+    color: rgb(255, 255, 255);
+}
+.buttonDelete {
+    margin-top: auto;
+    padding-top: 3px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background-color: rgb(159, 5, 5);
+    border: none;
+    height: 2rem;
+    border-radius: 2rem;
+    margin-bottom:10px ;
+}
+.buttonDelete:hover {
+    background-color: rgb(151, 53, 53);
+}
+.buttonAdd{
+    margin-bottom: 1rem;
+}
+.titleMenuUser {
+    text-align: center;
+    margin-top: 4%;
+    margin-bottom: 2%;
+    font-family: EBGaramondVariable;
+    font-weight: 800;
+    color: rgb(31, 62, 0);
+}
+/* Estilo del boton del menu user */
+
+.buttonChange{
+    margin-top: 5%;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background-color: rgb(31, 62, 0);
+    border: none;
+    height: 3rem;
+    width: 10rem;
+    border-radius: 1rem;
+    font-weight: 600;
+}
+

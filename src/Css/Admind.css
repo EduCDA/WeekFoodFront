@@ -1,0 +1,65 @@
+#titleAdmind {
+  margin-top: 4%;
+
+}
+.buttonAdminTable{
+  background-color: rgb(31, 62, 0);
+  color: white;
+  padding: 1rem;
+  border: none;
+  font-weight: 700;
+}
+.buttonAdminTable:hover{
+  color: rgb(254, 201, 41)
+}
+.userTable {
+  margin-bottom: 1%;
+  margin-top: 3%;
+  font-family: EBGaramondVariable;
+  font-weight: 800;
+  color: rgb(31, 62, 0);
+  padding-bottom: 1cqmax;
+}
+
+
+.adminTableContainer {
+  overflow-x: auto;
+  overflow-y: auto;
+  /* Agrega esto para permitir el desplazamiento vertical */
+}
+
+.tablaAdmind {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tablaAdmind th,
+.tablaAdmind td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+@media screen and (max-width: 733px) {
+  #cols {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .tablaAdmind th,
+  td {
+    padding: 6px;
+  }
+
+  .adminTableContainer {
+    overflow-x: auto;
+    overflow-y: visible;
+    /* Cambia a 'visible' para permitir el colapso hacia abajo */
+  }
+}
+/* SemanalAdmind */
+#containerWeek{
+  margin-bottom: 15%;
+}

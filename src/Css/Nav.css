@@ -1,0 +1,87 @@
+@font-face {
+    font-family:Freeman ;
+    src: url(../sources/Freeman-Regular.ttf);
+}
+@font-face {
+    font-family: EBGaramondItalic ;
+    src: url(../sources/EBGaramond-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family:EBGaramondVariable ;
+    src: url(../sources/EBGaramond-VariableFont_wght.ttf);
+}
+.navContent
+{
+    background-color: rgb(254, 201, 41);
+    width: 100%;
+}
+.buttonNav { 
+    padding: 5px 12px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    text-align: center;
+}
+.secondary {background-color: rgb(31, 62, 0); border: 2px solid #e7e7e7;border-color: rgb(31, 62, 0);} 
+.loginLetter
+{
+    font-family: sans-serif;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+.loginLetter:hover{color: rgb(254, 201, 41);}
+.titleNav
+{
+    font-family: "EBGaramondVariable";
+    margin-left: -1cqmax;
+    font-weight: 900;
+    color: rgb(31, 62, 0);
+}
+.items
+{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-right: 8%;
+    margin-left: 8%;
+    font-size:large;
+}
+.logoNavLink{
+    text-decoration: none;
+}
+.aItems {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    margin-left: 2cqmax;
+    }
+    .aItems:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    transition: left .8s;
+    }
+    .aItems:hover:after {
+        left: 0;
+    }
+    @media (max-width: 768px) {
+        .items {
+            margin-left: -4%;
+        }  
+        .aItems
+        {
+            margin-bottom: 1%;
+        }  
+        .buttonNav
+        {
+            margin-left: -4%;
+            text-align: initial;
+            background-color: rgb(254, 201, 41);
+            border-color: rgb(254, 201, 41);
+        }
+        .loginLetter:hover{color: rgb(31, 62, 0);}
+    }
